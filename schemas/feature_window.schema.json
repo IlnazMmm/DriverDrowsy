@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/drowsy/feature-window/1.0.0",
+  "title": "FeatureWindow v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "session_id", "start_s", "end_s", "warmup", "features", "config_hash"],
+  "properties": {
+    "schema_version": {"const": "1.0.0"},
+    "session_id": {"type": "string", "minLength": 1},
+    "start_s": {"type": "number"}, "end_s": {"type": "number"},
+    "warmup": {"type": "boolean"}, "config_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "features": {
+      "type": "object", "additionalProperties": false,
+      "required": ["perclos", "blink_rate", "blink_duration", "gaze_direction", "yawn_duration", "yawn_rate"],
+      "properties": {
+        "perclos": {"$ref": "#/$defs/feature"}, "blink_rate": {"$ref": "#/$defs/feature"},
+        "blink_duration": {"$ref": "#/$defs/feature"}, "gaze_direction": {"$ref": "#/$defs/feature"},
+        "yawn_duration": {"$ref": "#/$defs/feature"}, "yawn_rate": {"$ref": "#/$defs/feature"}
+      }
+    }
+  },
+  "$defs": {"feature": {"type":"object","additionalProperties":false,"required":["value","unit","status","reason","quality"],"properties":{"value":{"type":["number","object","null"]},"unit":{"type":"string"},"status":{"enum":["measured","proxy","unknown"]},"reason":{"type":["string","null"]},"quality":{"type":["number","null"],"minimum":0,"maximum":1}}}}
+}
