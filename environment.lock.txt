@@ -1,0 +1,20 @@
+Pygments==2.20.0
+black==26.3.1
+click==8.3.3
+iniconfig==2.3.0
+isort==8.0.1
+librt==0.9.0
+mypy==1.20.2
+mypy_extensions==1.1.0
+nodeenv==1.10.0
+oai-monorepo-git @ file:///tmp/oai-monorepo-git/oai_monorepo_git-0.0.1%2Bgit.t3e297253e4.os.noble-cp312-cp312-linux_x86_64.whl#sha256=6ea315d16862f0d4bb53035edd0b7d98e8664eb8018086c8e5a43d58b353f675
+packaging==26.2
+pathspec==1.1.1
+pip==26.1
+platformdirs==4.9.6
+pluggy==1.6.0
+pyright==1.1.409
+pytest==9.0.3
+pytokens==0.4.1
+ruff==0.15.12
+typing_extensions==4.15.0
