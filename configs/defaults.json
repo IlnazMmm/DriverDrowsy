@@ -1,0 +1,16 @@
+{
+  "schema_version": "1.0.0",
+  "drozy_root": null,
+  "window_seconds": [30.0, 60.0, 120.0],
+  "production_window_seconds": 60.0,
+  "step_seconds": 1.0,
+  "maximum_gap_seconds": 0.5,
+  "ear_close_threshold": 0.20,
+  "ear_open_threshold": 0.24,
+  "mar_open_threshold": 0.60,
+  "mar_close_threshold": 0.50,
+  "minimum_blink_seconds": 0.08,
+  "maximum_blink_seconds": 0.8,
+  "minimum_yawn_candidate_seconds": 1.5,
+  "interp_indices_semantics": null
+}
